@@ -1,11 +1,14 @@
-# Main GSAS-II menu commands
+# GSAS-II Main menu commands
 
+The menubar has two types of entries. The "Main" menu commands, described here, are present regardless of what data tree entry is selected. In addition, most data tree items have menu items specific to that entry. Those menu commands are described with the data tree entry. 
+
+<a name="File_menu"></a>
 ## **File** Menu
 
-* **Open project...** - Open a previously saved GSAS-II project file ({project}.gpx). If you currently have a project file open, you are asked if it is OK to overwrite it; Cancel will cancel the read process.
+* **Open project...** - Open a previously saved GSAS-II project file (files are named as &lt;project&gt;.gpx). If you currently have a project file open, you are asked if you want to "Save &amp; Overwrite" as the contents of the current project may be lost in this operation. If you say "Yes" the current project will be saved before the next project is read; if you say "No" any changes to the current project will be discarded; "Cancel" will cancel the Open action, as if the menu command had not been entered.
 
     !!! Note
-        Note that as files are saved during a structure refinement, copies of the previous version are saved as backup files, named as {project}.bak{i}.gpx, where i starts as 0 and is increased after each save operation. NB: you may open a backup .gpx file (e.g. name.bak3.gpx) to return to a previous version of your project, but if you do so, it is best to immediately use the Save As... menu command (you may wish to use name.gpx to overwrite the current version or select a new name.) If you forget specify a project name, then name.bak3 will be considered the project name and backups will then be named name.bak3.bak0.gpx, etc.
+        Note that as files are saved during a structure refinement, copies of the previous version are saved as backup files, named as {project}.bak{i}.gpx, where i starts as 0 and is increased after each save operation. NB: you may open a backup .gpx file (e.g. name.bak3.gpx) to return to a previous version of your project, but if you do so, it is best to immediately use the Save As... menu command (you may wish to use the same named as before to overwrite the current version or select a new name.) If you forget specify a project name, then name.bak3 will be considered the project name and backups will then be named name.bak3.bak0.gpx, etc.
 
 * **Save project** - Save the current project. If this is a new project that has not yet been saved, you will be prompted for a new name in a file dialog (you may optionally change the directory in that dialog). If the file exists, you will be asked if it is OK to overwrite it. Once a file name has been used to read or save a project, the name is shown after 'Loaded Data:' in the first item in the data tree.
 * **Save Project as...** - Save the current project in a specified project file. You will be prompted for a new name in a file dialog (you may optionally change the directory in that dialog). If the file exists, you will be asked if it is OK to overwrite it. The current project will be now named as the saved project name.
@@ -16,6 +19,7 @@
 * **wx.inspection tool** - Debugging tool.
 * **Quit** - Exit the GSAS-II program. You will be asked if the project should be saved or not (Cancel aborts the quit). You can also exit GSAS-II by pressing the red X in the upper right (Windows) or left (Mac). Pressing the red X on the console will kill the GSAS-II run without any save.
 
+<a name="Data_menu"></a>
 ## **Data** Menu
 
 * **Read Powder Pattern Peaks...** - Read in a list of powder pattern peak positions as either a d-spacing or 2Q position table; these can be used in GSAS-II powder pattern indexing. They are distinguished by their order (highest d or smallest 2Q first in table).
@@ -34,6 +38,7 @@
 * **Expand tree item** - This will show child entries for specified type of items (IMG, PWDR, etc.)
 * **Move tree item** - Move classes of Tree items (IMG, PWDR, Phase, etc.) around in the tree. Individual top-level tree items can be moved using the right mouse button.
 
+<a name="Calculate_menu"></a>
 ## **Calculate** Menu
 
 * **Setup PDFs** - This creates the pair distribution function (PDF) controls for each powder pattern selected in the dialog box, but does not compute the PDF, which must be done from PDF tree entries. See PDF Controls for information on the PDF input.
@@ -50,6 +55,7 @@
 * **Run Absorb** - This runs the utility routine Absorb that displays the x-ray absorption for a user selected sample composition as a function of wavelength/energy.
 * **Run PlotXNFF** - This runs the utility routine PlotXNFF which displays resonant (if any) neutron scattering lengths for all isotopes of a selected element. It also displays the x-ray and magnetic neutron form factors for all valences (if any) for this element.
 
+<a name="Import_menu"></a>
 ## **Import** Menu
 
 GSAS-II uses separate routines to read in information from external files that can be created and customized easily. See the GSAS-II Import Modules section of the Programmers documentation for more information on this. Since it is easy to support new formats, the documentation below may not list all supported formats.
@@ -88,48 +94,8 @@ Other formats currently available for import include JANA m50, ICDD str, SHELX i
 
     * **Auto Import** - This brings up a window that reads in powder diffraction files as they are added to a directory. The file extension must determine the importer that will be used and a filter pattern is specified to determine which files will be read (e.g. use "*June23*.fxye" so that only files that contain the string "June23" will be read.
 
-    * **Fit Instr. profile from fundamental parms...** - This option is used to compute instrument parameters from a set of fundamental parameters that describe a constant wavelength (most likely Bragg-Brentano) powder diffraction instrument. The user must first specify the data range to be used and then a set of FP (fundamental parameter) values. The FP values and a source spectrum can be supplied using a nomenclature similar to Topas (described further below). They will then be converted to the SI units and parameter names used in the NIST FPA code. Alternately a file can be supplied with the parameter values used directly in that program. With this input, a series of peaks are computed across the specified data range and the Instrumental Parameters that determine the instrumental profile (U, V, W, X, Y and SH/L) are determined from those peaks. These values are then saved in an instrument parameter file that can be used when reading in new datasets or for pattern simulation.
-
-## Topas-style Fundamental parameters
-
-Description of the Topas-style fundamental parameters used as FPA input for GSAS-II
-
-### Basic Bragg-Brentano parameters
-
-* **Parameter name (Units)** - Description
-* **divergence (degrees)** - Angle in equatorial plane describing the sample illumination for a Bragg-Brentano instrument
-* **soller_angle (degrees)** - Angular limit for divergence in equatorial plane as limited by Soller collimator(s)
-* **Rs (mm)** - Diffractometer radius: source to sample and sample to detector distance
-* **filament_length (mm)** - Length of x-ray filament when used in “line-focus” (filament oriented along the axial direction)
-* **sample_length (mm)** - Illuminated sample length in axial direction. Typically the same as filament_length.
-* **receiving_slit_length (mm)** - Length of the receiving slit in axial direction. Typically the same as filament_length.
-* **LAC_cm (cm<sup>-1</sup>)** - :	The linear absorption coefficient adjusted for the sample packing density.
-* **sample_thickness (mm)** - Thickness of sample measured along the radial direction in the equatorial plane
-* **convolution_steps (none)** - The number of steps used for convolution for each step in the diffraction pattern. This results in more smooth convolutions. 
-* **source_width (mm)** - Width of x-ray filament in projection in the equatorial plane.
-* **tube-tails_L-tail (mm)** - Width for x-ray intensity occurring beyond the Wehnelt shadow as a projection in the axial direction and measured in the positive two-theta direction.
-* **tube-tails_R-tail (mm)** - Width for x-ray intensity occurring beyond the Wehnelt shadow as a projection in the axial direction and measured in the negative two-theta direction.
-* **tube-tails_rel-I (none)** - Fractional of x-ray intensity found in the tube tails vs. the main peak. Note that tube tails are modeled as a step function.
-
-### Point detector parameter
-
-* **receiving_slit_width (mm)** - Width of receiving slit placed in front of detector or possibly the diffracted beam monochromator (analyzer) measured in the equatorial plane
-
-### Linear position-sensitive detector parameter
-
-* **SiPSD_th2_angular_range (degrees)** - Angular (two-theta) range in equatorial plane that the entire Si PSD subtends (not implemented in Topas)
-
-### Incident-beam monochromator (IBM) parameters
-
-* **src_mono_mm (mm)** - Distance between the x-ray source (filament) and the monochromator, measured in the equatorial plane
-* **focus_mono_mm (mm)** - Distance from monochromator crystal to focus slit, measured in the equatorial plane
-* **passband_mistune (none)** - Offset for the tuning of the IBM to the center of the reference line of the spectrum, as a fraction of the IBM bandwidth
-* **mono_src_proj_mn (micron)** - Bandwidth setting for the monochromator as set by the projection width of the xray source on the monochromator along beam direction and in the equatorial plane
-* **passband_shoulder (none)** - Width of transition region from high-intensity, roughly flat region of the x-ray tube output to the to the tube tails region as a fraction of the IBM bandwidth
-* **two_theta_mono (degrees)** - The full diffraction angle of the IBM crystal. This will be double the Bragg two-theta angle for the monochromator
-* **mono_slit_attenuation (none)** - The attenuation of the Cu K alpha 2 source lines relative to the K alpha 1 lines as determined by the focal slit
-
-If you use this, please cite M.H. Mendenhall, K. Mullen & J.P. Cline (2015), J. Res. of NIST, 120, p223. [DOI: 10.6028/jres.120.014](https://doi.org/10.6028/jres.120.014). If the incident beam monochromator model is used, please also cite: M.H. Mendenhall, D. Black & J.P. Cline (2019), J. Appl. Cryst., 52, p1087. [DOI: 10.1107/S1600576719010951](https://doi.org/10.1107/S1600576719010951).
+<a name="FPA_menuitem"></a>
+    * **Fit Instr. profile from fundamental parms...** - This option is used to compute instrument parameters from a set of fundamental parameters that describe a constant wavelength (most likely Bragg-Brentano) powder diffraction instrument. The user must first specify the data range to be used and then a set of FP (fundamental parameter) values. The FP values and a source spectrum can be supplied using a nomenclature similar to Topas (described further below). They will then be converted to the SI units and parameter names used in the NIST FPA code. Alternately a file can be supplied with the parameter values used directly in that program. With this input, a series of peaks are computed across the specified data range and the Instrumental Parameters that determine the instrumental profile (U, V, W, X, Y and SH/L) are determined from those peaks. These values are then saved in an instrument parameter file that can be used when reading in new datasets or for pattern simulation. Input is [described separately](./FPA.md).
 
 * **Structure Factor** - Reads single crystal input from a variety of file types. Results are placed in the GSAS-II data tree as 'HKLF file name'
     * **F\*\*2 HKL file** - This reads squared structure factors (as F\*\*2) and sig(F\*\*2) from a SHELX format .hkl file. The file names are found in a directory dialog; you can change directories as needed. You must know the file contains structure factors (as F\*\*2) as the file itself has no internal indication of this.
@@ -144,6 +110,7 @@ There are specific importers for incommensurate or twinned single crystal data a
 * **Powder Peak Position Data** - Reads ordered peak positions as 2Q or d-spacing from .txt files. Results are placed in the GSAS-II data tree as 'PKS file name'. The data format consists of optional comments (each line starts with '#') followed by positions in a single column. If 1st position is larger than last, they are interpreted as d-spacings, otherwise as 2Q. A second column of intensities is optional.
 * **PDF G(R) Data** - Reads pair distribution data for possible analysis by PDFfit from within GSAS-II.
 
+<a name="Export_menu"></a>
 ## **Export** Menu
 
 GSAS-II uses separate routines to write out files with information inside GSAS-II. These routines can be created and customized easily. See the GSAS-II Export Modules section of the Programmers documentation for more information on this. Since it is easy to support new formats, the documentation below may not list all supported formats.
@@ -161,6 +128,7 @@ GSAS-II uses separate routines to write out files with information inside GSAS-I
 * **Export MTZ file** - This exports macromolecular structure information in a commonly recognized format for input to other macromolecular packages.
 * **Export PDF...** - This allows computed PDFs peak lists from selected histograms to be written as two simple text files, {name}.gr and {name}.sq, containing g(r) and s(q), respectively as 2 columns of data; a header on each indicated the source file name and the column headings. The file name comes from the PDF entry in the GSAS-II data tree.
 
+<a name="Help_menu"></a>
 ## **Help** Menu
 
 The help menu allows for updating or selecting a GSAS-II version, access to GSAS-II tutorials, or access to documentation on GSAS-II.
