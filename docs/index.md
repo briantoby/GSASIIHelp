@@ -1,9 +1,24 @@
-# Help Index GSAS-II
+# Help for GSAS-II
 
-This is an index for where to find help on various GSAS-II windows and plots.
+This and the subsequent web pages provide documentation for the
+GSAS-II graphical user interface (GUI). The information is organized
+largely to follow the different sections of the GUI and is usually
+accessed via the "Help" features in GSAS-II. Help on specific sections
+of GSAS-II can be accessed from the yellow "?" button in the upper
+right corner of the data window. Access to specific help information 
+is also offered on the graphics
+window and in other locations of the program. 
 
-1. [Preface](./preface.md)
-2. [Application windows](./applicationwindow.md)
+An index on the topics covered in these help pages is given below. 
+
+<a name="Index"></a>
+
+1. [Tutorials](./preface.md)  
+2. [GSAS-II GUI Organization](./applicationwindow.md)
+    1. [Data Tree](./applicationwindow.md#Data_tree)  
+    1. [Data Window](./applicationwindow.md#Data_frame)  
+    1. [Plots Window](./applicationwindow.md#Plots)  
+    1. [Console Window](./applicationwindow.md#Console)  
 3. [Main menu commands](./mainmenu.md)
 4. Data Tree headings, graphics windows and menu commands
     1. [Top-level](./datatree.md) Data Tree headings
