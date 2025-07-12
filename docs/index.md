@@ -19,7 +19,7 @@ An index on the topics covered in these help pages is given below.
     1. [Data Window](./applicationwindow.md#Data_frame)  
     1. [Plots Window](./applicationwindow.md#Plots)  
     1. [Console Window](./applicationwindow.md#Console)  
-3. [Main menu commands](./mainmenu.md)
+3. [Main menu contents](./mainmenu.md)
 4. Data Tree headings, graphics windows and menu commands
     1. [Top-level](./datatree.md) Data Tree headings
     2. [Phase](./phase.md) Data Tree headings

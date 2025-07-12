@@ -2,6 +2,7 @@ site_name: GSAS-II Help
 
 nav:
   - Contents: index.md
+  - Getting started: preface.md
   - Main_window: applicationwindow.md
   - Datatree: datatree.md
   - Histograms: histgramtree.md
@@ -14,7 +15,7 @@ nav:
   - SASD - Small Angle: smallanglescattering.md
   - REFD - Reflectometry: reflectometry.md
   - Other info: others.md
-  - About: preface.md
+
   
 theme:
   name: material
@@ -29,9 +30,9 @@ plugins:
           default: true
           name: English
           build: true
-        - locale: ja
-          name: 日本語
-          build: true
+#        - locale: ja
+#          name: 日本語
+#          build: true
 
 markdown_extensions:
   - def_list
