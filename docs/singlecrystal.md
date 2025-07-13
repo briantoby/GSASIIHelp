@@ -1,6 +1,6 @@
 #  Single Crystal Histograms – type HKLF
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 You can change the weight factor. This is a multiplier on all of the reflection weights in this histogram. Rarely needs to be changed.
 
@@ -20,7 +20,7 @@ This window shows the histogram type (SXC or SNC) and the wavelength. You may ch
 
 This window shows the reflections for this single crystal data set.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 * Menu '**Reflection List**' – some items are useful for SHKL (single crystal) histograms.
     * **Select phase** – if there is more than one phase; you can select another phase; the window title will show which phase is shown. You can also simply select the tab for the desired phase.
@@ -30,10 +30,10 @@ This window shows the reflections for this single crystal data set.
     * **Wilson statistics** – displays a Wilson plot for the intensities.
     * **Show/hide extinct reflections** – can exclude space group extinctions from the list (not valid for PWDR data).
 
-### What is plotted here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 By default, the plot will show a l=0 layer of reflections on a square grid as rings proportional to Fo (blue), Fc (green) and a central dot (green or red) proportional to Fo-Fc.
 
-### What can I do with the plot?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 The "K" box in the plot controls shows the 14 keystroke controls for the plot – they are generally self-explanatory.

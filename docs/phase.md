@@ -12,7 +12,7 @@ When a phase is selected from the data tree, parameters are shown for that selec
 
 This gives overall parameters describing the phase such as the name, space group, the unit cell parameters and overall parameters for the atom present in the phase. It also has the controls for Pawley intensity extraction and for computing Fourier maps for this phase. It can also has the controls for Monte Carlo/Simulated Annealing for solving structures with flexible rigid molecular bodies..
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Menu '**Compute**' – The compute menu shows computations that are possible for this phase.
 
@@ -162,7 +162,7 @@ For single crystal data, the only parameters are scale, extinction and disordere
 * **Disordered solvent**; Babinet A & B - This correction, using the Babinet model, is typically used to treat scattering from solvent that is not well-ordered in protein structures. It probably makes no sense in most any other application.
 * **Merohedral twins** - Used for single crystal data; gives twin law transformation matrix and fraction for each twin member. These are for merohedral twins where the observed structure factors are a composite of contributions from each twin. Twin fractions are automatically constrained to sum to unity.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 * In this tab, menu items allow copying values or refinement flags to histograms/phases and selection of which histograms are used in the current phase.
 * The plot selection items allow for three dimensional representations of the microstrain or crystallite size distributions (which are spheres for isotropic treatments); preferred orientation can be plotted as a Psi scan (a plot of relative crystallite abundance for a particular reflection as a function of azimuthal angle) or as an inverse pole figure (which shows a stereographic projection of the probability distribution for different reciprocal lattice directions as viewed down the sample cylinder axis). For no texture/preferred orientation this figure would be flat = 1.0.
@@ -171,7 +171,7 @@ For single crystal data, the only parameters are scale, extinction and disordere
 
 This is the table of parameters for the atoms in this crystal structure model. The menu controls allow manipulation of the values, refinement flags as well as initiate calculations of geometrical values (distances & angles) among the atoms.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. **Atom selection from table** - These are controlled by the mouse and the Shift/Ctrl/Alt keys. Note that for most purposes (one exception is atom reordering which requires an Alt-Left-click on the rows), selection of any cell for an atom will work equivalently with selection of the entire row. Upon selection the atoms will turn green in the structure drawing:
 
@@ -223,7 +223,7 @@ This is the table of parameters for the atoms in this crystal structure model. T
     * **Density** – calculate density
     * **ISODISTORT mode values** – there must be available the ISODISTORT mode displacement constraints available. This will compute the mode displacements for the current atom positions and display them in a popup window.
 
-### What can I do with the drawing?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 A drawing of the crystal structure will be displayed only if the Draw Options or Draw Atoms tabs are visited first. When back at the Atoms tab, the following are applicable and use of the mouse buttons changes the view of the structure and can be used to select atoms.
 
@@ -243,15 +243,15 @@ A drawing of the crystal structure will be displayed only if the Draw Options or
 
 ## Draw Options
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 The Draw Options window provides access to a number of items that control how the structure is displayed. If a map is available (Fourier of charge flipping), one can display a 10Åx10Å contoured slice centered at the viewpoint. Contouring done as lines, colors or lines & colors combined. 3-D contouring is also available as green (red for negative density) map grid points. One can also draw individual or stack of hkl planes across unit cell.
 
-### What is drawn here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 A drawing that shows the atoms of the crystal structure is generated. The way that the structure is displayed is determined according to the controls in this page as well as the options on the Draw Atoms page.
 
-### What can I do with the drawing?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 Use of the mouse buttons and key presses when viewing a crystal structure changes the view of the structure; see Atoms or Draw Atoms for details
 
@@ -259,7 +259,7 @@ Use of the mouse buttons and key presses when viewing a crystal structure change
 
 This gives a list of the atoms and bonds that are to be rendered as lines, van der Waals radii balls, sticks, balls & sticks, ellipsoids & sticks or polyhedra. There are four menus for this tab; Edit allows modification of the list of atoms to be rendered, Compute gives some options for geometric characterization of selected atoms, Restraints allows definition of 4 different types of restraints on the structure and Rigid body allows selection of atoms that form a previously defined rigid body.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. **Atom Selection from table**: select individual atoms by a left click of the mouse when pointed at the left most column (atom numbers) of the atom display; hold down the Ctrl key to add to your selection; a previously selected atom will be deselected; hold down Shift key to select from last in list selected to current selection. A selected atom will be highlighted (in grey) and the atoms will be shown in green on the plot. Selection without the Ctrl key will clear previous selections. A double left click in the (empty) upper left box will select or deselect all atoms.
 2. **Atom Selection from drawing**: select an atom by a left click of the mouse while holding down the Shift key and pointed at the center of the displayed atom, it will turn green if successful and the corresponding entry in the table will be highlighted (in grey); any previous selections will be cleared. To add to your selection, use the right mouse button (Shift down); if a previously selection is reselected it is removed from the selection list. NB: beware of atoms that are hiding behind the one you are trying to select they may be selected inadvertently. You can rotate the structure anytime during the selection process.
@@ -299,11 +299,11 @@ This gives a list of the atoms and bonds that are to be rendered as lines, van d
 
 8. Menu '**Rigid body**'/'**Define rigid body**' – assign a previously defined rigid body to selected atoms.
 
-### What is drawn here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 A drawing that shows the atoms of the crystal structure is generated. The atoms are displayed according to the controls in the in this page as well as options on the Draw Options page.
 
-### What can I do with the drawing?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 Use of the mouse buttons and key presses when viewing a crystal structure changes the view of the structure:
 
@@ -326,13 +326,13 @@ Use of the mouse buttons and key presses when viewing a crystal structure change
 
 There are two actions associated with rigid bodies. First the rigid body must be defined for the project, see the Rigid bodies tree item for details on that. Then the rigid body must be inserted into a phase, which is done from each phases's RB Models tab. In this process, a number of parameters are defined for each body that determine how the rigid body is placed in the cell: the location in the cell for the rigid body origin, a rotation angle and orientation vector. These can be modified while being visualized, using the mouse by holding down the Alt key.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 A rigid body can be inserted into a phase using the "Locate & Insert Rigid Body" command in the "Edit Body" menu.
 
 Once a body has been inserted into a structure, this tab provides access to the rigid body placement parameters, as well controls that determine how the rigid body is refined. Note that the selected rigid body can be positioned and oriented in the unit cell by holding down the Alt key (option on Mac) while "dragging" the mouse (moving the mouse while holding a mouse button down.) Dragging the mouse without the Alt key repositions the view of the cell.
 
-### What can I do with the drawing?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 Use of the mouse buttons when viewing a crystal structure changes the view of the structure:
 
@@ -460,7 +460,7 @@ The usual arrangement here is to have a capillary sample perpendicular to the di
 
 The area detector is presumed to be directly behind the sample with the incident beam somewhere near the center of the detector. The detector axes are defined (for a synchrotron) with the X-axis toward the synchrotron ring and the Y-axis vertical "up"; one views the detector image as if looking from the x-ray source. The sample is assumed to be a capillary (which may be spun to impose cylindrical symmetry), although other sample shapes may be used, and is aligned with the cylinder axis horizontal. Integration of the image from a series of "caked" slices gives a set of powder patterns, each assigned an azimuthal angle where zero is along the X-axis. Thus, at azimuth=0 the diffraction plane is horizontal and contains the cylinder axis so \(\Omega\), X, \(\Phi\) = 0.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Menu '**Texture/Refine **texture' – refines the spherical harmonics texture model using the previously determined values of Prfo for all histogram reflection sets as demonstrated in 2DTexture tutorial.
 2. **Texture settings** - The texture index, J is shown on the 1st line.
@@ -484,7 +484,7 @@ The area detector is presumed to be directly behind the sample with the incident
 
 This gives the list (magnitude, x y & z) of all peaks found within the unit cell from the last Fourier/charge flip map search sorted in order of decreasing peak magnitude. The crystal structure plot shows each peak position as a white to dark gray cross; the shade is determined from the magnitude for the peak relative to the maximum peak magnitude; some are connected by white sticks as possible bonds. Negative peaks are shown in orange.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 * **Peak Selection from table**: select individual atoms by a left click of the mouse when pointed at the left most column (atom numbers) of the atom display; hold down the Ctrl key to add to your selection; a previously selected atom will be deselected; hold down Shift key to select from last in list selected to current selection. A selected atom will be highlighted (in grey) and the atoms will be shown in green on the plot. Selection without the Ctrl key will clear previous selections. A left click in the (empty) upper left box will select or deselect all atoms.
 * **Select the mag column** – the entries will be sorted with the largest at the top.
@@ -509,7 +509,7 @@ This gives the list (magnitude, x y & z) of all peaks found within the unit cell
 
 This gives the list of reflections used in a Pawley refinement; for them to be used the 'Do Pawley refinement' flag must be set (see General), otherwise they are ignored.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 * Menu '**Operations**' –
 
@@ -528,7 +528,7 @@ Layers
 
 This is used to set up stacking fault models for simulations of x-ray diffraction patterns. See for example the Stacking Faults-I tutorial. The computations are done by a modified version of DIFFaX. See M.M.J. Treacy, J.M. Newsam and M.W. Deem, Proc. Roy. Soc. Lond. 433A, 499-520 (1991) for more information on DIFFaX and please cite this if you use this section of GSAS-II.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Menu '**Operations**' –
 
@@ -553,7 +553,7 @@ You can draw the layer structures as well as sequences of layers to check on how
 
 This tab displays the modulation functions used for incommensurate structures; it will not appear if the structure is commensurate (i.e. 3D). They include modulations on atom site fractions, positions and thermal motion parameters. If the structure is magnetic, atom moment modulation parameters are also shown.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Select an atom from the Atoms list; the pulldown shows them by name. The display will show the assigned modulations, if any.
 2. Add a modulation wave and define its type; window will be redrawn showing allowed coefficients (white background) and symmetry fixed or dependent coefficients (gray background).
@@ -565,7 +565,7 @@ This tab displays the modulation functions used for incommensurate structures; i
 
 This tab displays Monte Carlo/Simulated Annealing model parameters and results. Each rigid body is described by a location (fractional x,y,z) and a quaternion description for the orientation (rotation angle & 3D vector) along with possible bond torsion angles on side chains. Each parameter has a defined range. The MC/SA controls on the General tab further limit the MC/SA run. Selection of a result shows a drawing of the structure with unit cell contents for visualization.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Modify the preferred orientation model (currently not operational)
 2. **MC/SA** Menu –
@@ -578,7 +578,7 @@ This tab displays Monte Carlo/Simulated Annealing model parameters and results. 
 
 This displays 3 different setups each for RMCProfile, fullrmc and PDFfit as selected by a radio button at the top of the window. RMCProfile and fullrmc are "big box" modelling routines and PDFfit is a "small box" modelling routine; all for fitting structural models to pair distribution functions (PDF). Tutorials for using RMCProfile and PDFfit can be found in the GSAS-II Help; fullrmc is currently under construction. These routines all run as stand-alone applications which are initiated by GSAS-II. When finished, GSAS-II processes their output files to update parameters that are within the GSAS-II project. The two big box routines can have very long running times; they run as separate console programs. GSAS-II is active while they are running and can "interrogate" them for intermediate results. PDFfit has a short running time and GSAS-II is "locked out" until it finishes; its result can be examined after.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 **Operations** Menu –
     * **Setup RMC** – this builds the input files and python script (if needed) for running the selected RMC program.
@@ -602,7 +602,7 @@ The fullrmc program is a large-box pair distribution function modeling library d
 
 This displays the setup for using the web-based application, [ISODISTORT](https://iso.byu.edu/iso/isodistort.php), to identify the possible mode distortions of a parent structure. To use it you must be connected to the internet. Two ISODISTORT Methods are supported in GSAS-II: Method-1 identifies all possible subgroups that result from simple mode distortions that are associated with a single irreducible representation. Method-4 is more useful in that it finds the mode decomposition of a parent structure to give a specified distorted structure and is set up to find only atom displacement modes. See help pages for [ISODISTORT](https://iso.byu.edu/iso/isodistort.php) for more information. The ultimate product of using ISODISTORT is a special cif file with constraints describing the mode distortions; this is imported into GSAS-II to form a new phase with these constraints.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 If this is a freshly created phase (not an imported ISODISTORT cif) then you can choose the Method (4 is default) and select parent structure and distorted child structure (for Method 4).
 
@@ -621,7 +621,7 @@ If this is a phase imported from an ISODISTORT cif file, the mode displacements 
 
 This is displayed if the **Use Dysnomia** box in the General tab is checked. [Dysnomia](https://doi.org/10.1017/S088571561300002X) is a maximum entropy method for improving Fourier density maps. The Dysnomia tab gives controls for its operation.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 * **Operations** menu –
     * **Load from Dysnomia file** – as previously saved set of controls.

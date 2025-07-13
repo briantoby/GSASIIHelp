@@ -3,17 +3,21 @@ site_name: GSAS-II Help
 nav:
   - Contents: index.md
   - Getting started: preface.md
-  - Main_window: applicationwindow.md
-  - Datatree: datatree.md
-  - Histograms: histgramtree.md
-  - Images: image.md
+  - GUI components: applicationwindow.md
   - Main menu: mainmenu.md
-  - PDF: pairdistribution.md
-  - Phases: phase.md
-  - PWDR - Powder: powderpeak.md
-  - HKLF - Single_Crystal: singlecrystal.md
-  - SASD - Small Angle: smallanglescattering.md
-  - REFD - Reflectometry: reflectometry.md
+  - Data tree items:
+    - Standard items: datatree.md
+    - Powder (PWDR): histgramtree.md
+    - Images: image.md
+    - PDF: pairdistribution.md
+    - Powder peaks (PKS): powderpeak.md
+    - Single Crystal (HKLF): singlecrystal.md
+    - Small Angle (SASD): smallanglescattering.md
+    - Reflectometry (REFD): reflectometry.md
+    - Phases: phase.md
+    - Sequential results: sequential.md
+    - Cluster Analysis: cluster.md
+    
   - Other info: others.md
 
   

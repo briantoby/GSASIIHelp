@@ -4,7 +4,7 @@
 
 This window provides a place for you to enter whatever text commentary you wish. Each time you enter this window, a date/time entry is provided for you. A possibly useful technique is to select a portion of the project.lst file after a refinement completes (it will contain refinement results with residuals, new values & esds) and paste it into this Notebook window so it becomes a part of your project file. Some GSAS-II operations (e.g., structure refinement & fourier map calculation) will add entries to the notebook.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 Use the notebook to keep track of information related to how you use GSAS-II. 
 
@@ -48,7 +48,7 @@ This window provides access to the controls that determine how GSAS-II performs 
 
     * **CIF Author** - The value provided here is used when creating a CIF of an entire project. 
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 This offers a place to change how GSAS-II performs refinements but has no specific menu commands or graphics.
 
@@ -59,11 +59,11 @@ This window contains residual information after the last refinement. When this t
 * The button labeled "last refinement" shows these ratios based on the differences between each parameter value from the beginning of the refinement run and the value at the end of the refinement run.
 * The button labeled "last cycle" shows these ratios based on the differences between each parameter value at the beginning of the last refinement least squares cycle and the value at the end of the cycle (and the refinement run). (These "last cycle" values are only available when the Controls are set for an "analytic Hessian" refinement.) 
 
-### What is plotted here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 The variance-covariance matrix as a color-coded array is shown on this page. The color bar to the right shows the range of covariances (-1 to 1) and corresponding colors. The parameter names are to the right and the parameter numbers are below the plot. 
 
-### What can I do with the plot?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 * Move the mouse cursor across the plot. If on a diagonal cell, the parameter name, value and esd is shown both as a tool tip and in the right-hand portion of the status bar. If the cursor is off the diagonal, the two parameter names and their covariance are shown in the tool tip and the status bar.
 * Use the Zoom and Pan buttons to focus on some section of the variance-covariance matrix.
@@ -88,9 +88,8 @@ The following types of constraints may be specified by users:
 Note that when new var and constraint equation constraints are defined, they create new global parameters. Constraints on these will be rare, but can be managed on the Globals tab. Finally, some constraints are defined automatically based on restrictions determined by space group symmetry. These constraints can be seen, but not changed, using the Sym-Generated tab. Other constraints (holds) will be created when rigid bodies are specified.
 
 New Var constraints are generated when ISODISTORT is used to develop mode distortions from a comparison of a high symmetry parent structure (e.g. cubic perovskite) with a distorted child substructure. They are developed for the phase imported from the special cif file produced by ISODISTORT from a mode distortion analysis.
-What can I do here?
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3> 
 
 Select the tab for the parameter type(s) you wish to constrain then create new parameters using the "Edit Constr." menu commands:
 
@@ -123,7 +122,7 @@ Also included when sequential refinement is selected is a menu button labeled "S
 
 This window shows the restraints to be used in a refinement for each phase (if more than one). It is organized into several tabbed pages, one page for each type of restraint. Restraints are developed for an individual phase and act as additional observations to be "fitted" during the refinement.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 * Select the tab for the restraint type you wish to use. Each will have the same possibilities in the 'Edit' menu.
 * You can change the Restraint weight factor – this is used to scale the weights for the entire set of restraints of this type. Default value for the weight factor is 1.0.
@@ -144,7 +143,7 @@ This window shows the restraints to be used in a refinement for each phase (if m
 
 This window shows the rigid body models that have been entered into GSAS-II for this project. There are two tabs; one is for vector style rigid bodies and the other is for flexible "Residue" rigid bodies. Note that these rigid bodies must be inserted into one of the phases before it can take effect in the crystal structure description.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 * Select the tab for the rigid body type you wish to use. Each will have the different possibilities in the 'Edit' menu depending on whether a rigid body has been defined.
 * Menu '**Edit Vector Body**' or '**Edit Residue Body**' – the entries listed below depend on which type of rigid body is selected.
@@ -156,237 +155,3 @@ This window shows the rigid body models that have been entered into GSAS-II for 
 
 * Once a rigid body is defined you can plot it, change its name or manipulate any torsion angle to see the effect on the plot.
 * The translation magnitudes in a vector rigid body can be refined.
-
-## Sequential Refinement Results
-
-This tree entry becomes available after a sequential fit has been run. Note there are the following types of sequential fits:
-
-1. Rietveld: Sequential results
-2. PDF: Sequential PDFfit2 results
-3. Peak fit: Sequential peak fit results
-4. Small angle: Sequential SASD fit results
-5. Reflectometry: Sequential REFD results
-6. Image (strain): Sequential strain fit results
-7. Image (calibration): Sequential image calibration results 
-
-Each sequential fitting process within GSAS-II will have its own differently named set of sequential results, as listed above. When any of these tree items is selected, the window tabulates the sequential fit results. The columns are the parameter names; the naming convention is generally 'p:h:name:n' where 'p' is the phase number,' h' is the histogram number, 'name' is the parameter name, and 'n' (if needed) is the item number (e.g. atom number). The rows are the data sets used in the sequential refinement.
-
-For a sequential Rietveld refinement, set the PWDR histograms to be used in the sequential refinement in the Controls tree item. Note that the Calculate/Refine menu command will be renamed as "Sequential Refine." Since not all histograms need be used in a sequential Rietveld fit, after a sequential fit, histograms that have been fit will be included in the table. Previously fit histograms will not be removed unless the table is cleared (in the Controls tree item). In this way, a large sequential fit may be worked on in sections. The first column of the table will list the histogram number and the number will be shown in red if it was not fit in the last sequential refinement.
-
-### What can I do here?
-
-* **Select a row** - a right mouse button will display the variance-covariance matrix for the refinement with that data set; a left mouse button will display its powder data fit.
-* **Select a column** - this will display a plot of that parameter across the sequence of data sets. Error bars for each value are also shown. Selecting multiple columns (hold Ctrl key down for subsequent picks) will plot all as individual curves.
-
-* Menu '**Columns/Rows**' -
-
-    * **Set used** - this allows you to select in a dialog which entries to use; those not used are not plotted or used in further processing.
-    * **Update phase from row** - this updates the phase parameters from the entries in the selected row. Normally the phase parameters at the end of a sequential fit are those obtained from the last histogram.
-    * **Set phase vals** - same as previous except you can pick which parameters to update.
-    * **Plot selected cols** - plots the selected columns (redundant as selecting the columns automatically plots them)
-    * **Rename selected cols** - can change column names with this
-    * **Save selected as text** - gives a txt file with columns of data from those selected.
-    * **Save selected as CSV** - gives a comma separated values (CSV) file of selected columns.
-    * **Compute average** - gives average(esd) for selected column values.
-    * **Hide columns** - you can select/deselect columns to not show in table.
-    * **Save all as CSV** - gives a CSV file for all table entries.
-
-* Menu '**Pseudo Vars**' – this is used to create derived results from sequentially refined parameters; new columns are the result.
-
-    * **Add Formula** - create a formula used to make a derived result.
-    * **Add Distance** - adds a new column for a specific interatomic distance.
-    * **Add Angle** - adds a new column for a specific 3-atom angle.
-    * **Delete** - to remove a pseudo variable formula.
-    * **Edit** - to change a selected formula.
-
-* Menu '**Parametric Fit**' - this is used to create fitting models for any column of sequential results.
-
-    * **Add equation** - add a parametric fitting equation. At the end of this step, it will be used to give refined values of the coefficients with esds based of a full error propagation from the variance-covariance matrices from the individual refinements.
-    * **Copy equation** - make a copy of a parametric equation.
-    * **Delete equation** - to remove a parametric equation.
-    * **Edit equation** - to edit an equation.
-    * **Fit to equation(s)** - do the fitting of the parametric equations to the data.
-* Menu '**Seq export**' –
-    * **Project as** - only choice is as a full cif file.
-    * **Phase as** - either a "quick' cif or a CSV file
-    * **Powder as** - either a powder pattern cif, a histogram CSV file or a reflection list CSV file.
-    * **Save table as CSV** - same as Save all as CSV above.
-
-### What can I do with the plot?
-
-By default, the plot shows the variation of the selected parameters across the sequence of histograms used in the sequential fit. Each point that was fitted shows as an x with a vertical bar indicating the standard error from the fit for that value. There are some key commands:
-
-* Press 'l' – toggles display of connecting lines between the data points
-* Press 's' – this presents a choice of parameters from the table columns to be used for the x-axis. Typically, this is used to show parameter variation with e.g. temperature.
-* Press 't' – this provides access to all three titles of the plot.
-
-## Cluster Analysis
-
-Cluster analysis is a suite of data survey techniques where data are grouped by some measure of their similarity. Thus, it can be used as a preliminary survey of a large number of data sets in e.g. preparation of detailed examination of representative members. In the case of powder diffraction pattern (PWDR) data or pair distribution (PDF) data, their similarity is determined by considering each pattern as a hyper-dimensional vector with one dimension for each data point and then computing some measure of how parallel pairs of these vectors are. Consequently, it can be used to survey PWDR data entries that have identical scan characteristics (e.g. instrument type, step size, radiation type, wavelength) or multiple PDF G(R) entries created with the same step sizes and using the same radiation from data collected with identical instrument configurations. Cluster analysis is available in GSAS-II after it is initiated by the main menu command **Calculate/Setup Cluster Analysis**. The cluster analysis routines used here are from the scipy library and (if available) the scikit-learn library.  If scikit-learn is absent, an attempt is automatically made to install the latter via the conda system from Anaconda. The scipy library provides some cluster analysis tools while the scikit-learn package provides others. If you use results from scikit-learn, please cite the following in any publication that uses it:
-
-"Scikit-learn: Machine Learning in Python", Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M. and Duchesnay, E., (2011). Journal of Machine Learning Research 12, 2825-2830.
-
-### What can I do here?
-
-## Cluster Analysis with scipy
-
-Doing cluster analysis in GSAS-II requires several steps; new steps will become visible in the GUI as previous ones are completed. Redoing earlier steps may clear subsequent ones. In order of their appearance, the following GUI commands are:
-
-* **Select datasets** - this brings up a selection tool for PWDR (& PDF, if present) entries in the GSAS-II data tree. Your selection must be either PWDR or PDF data; otherwise, there is no check on data similarity so be careful with your selections. Multi-bank TOF data should not be mixed for cluster analysis nor should laboratory and synchrotron data. Cluster analysis on fewer than 5-10 data sets is probably not useful but should be used when you have dozens or even hundreds of data sets.
-* **Data limits** - selection of data is followed by entries for the minimum and maximum data limits; the defaults are taken from the data Limits imposed on the original PWDR data or the r-range for the PDF G(R) data. The units are degrees 2Q, TOF in μs, or Å, as appropriate. Refer to any PWDR (or PDF) plot to select these values; leading background should be skipped, and the upper limit chosen from a relatively clear point where there are still significant peaks. Values will be used to give the cluster analysis input data matrix size.
-* **Make Cluster Analysis data array** - this button forms the data matrix for cluster analysis; it is number of data sets times number of data points between the limits in size. the next item will appear in the GUI.
-* **Select cluster analysis distance method** - there are several choices as what is meant by "distance" between all pairwise selection of data vectors (u & v). They are (as taken from scipy):
-
-    * **braycurtis** – Computes the Bray-Curtis distance between the data vectors as
-
-    $$
-    d(u,v) = \frac{\sum_i | u_i - v_i | }{\sum_i | u_i + v_i |}
-    $$
-
-    * **canberra** – Computes the Canberra distance between data vectors as:
-
-    $$
-    d(u,v) = \sum {\frac{ | u_i - v_i | }{| u_i | + |v_i |} }
-    $$
-
-    * **chebyschev** – Computes the Chebyschev distance between data vectors as:
-
-    $$
-    d(u,v) = \max { | u_i - v_i | }
-    $$
-
-    * **cityblock** (sometimes called "Manhattan") – Computes the city block distance between data vectors as:
-
-    $$
-    d(u,v) = \sum { | u_i - v_i | }
-    $$
-
-    * **correlation** – Computes the correlation distance between data vectors as:
-
-    $$
-    d(u,v) = 1 - \frac{ ( u - \bar{u} ) \cdot ( v - \bar{v} ) }{ \sqrt{ ( u - \bar{u} )^2 ( v - \bar{v} )^2}}
-    $$
-
-    * **cosine** – Computes the cosine squared between the data vectors as:
-
-    $$
-    d(u,v) = 1 - \frac{ u \cdot v }{ \sqrt{ u^2 v^2 } }
-    $$
-
-    *  **euclidian** (default) – Computes the Euclidian distance between the data vectors as:
-
-    $$
-    d(u,v) = \sqrt{ \sum_i ( u_i - v_i )^2 }
-    $$
-
-    * **jensenshannon** – Computes the Jensen-Shannon distance between the data vectors
-
-    * **minkowski** – Computes the Minkowski distance between the data vectors as:
-
-    $$
-    d(u,v) = \sqrt[p]{ \sum_i {( u_i - v_i )^p } }
-    $$
-
-    where the exponent, p, = 2 by default; this is identical to the Euclidian formula. Some choices for p: 1 is the same as city block, and 10 (~  ∞) is essentially the same as Chebyschev. The others (3 & 4) give distance results that are between Euclidian (p=2) and Chebyschev (p=10 ~ ∞).
-
-    * **seculidian** – Computes the standardized Euclidian distance between the data vectors as:
-
-    $$
-    d(u,v) = \sqrt{ \sum_i {( u_i - v_i )^2 }/V[X_i] }
-    $$
-
-    where the variance, V[xi], is computed automatically as the variance in the data point values for each data position (i.e. 2Q) across the entire data array.
-
-    * **sqeuclidian** – Computes the squared Euclidian distance between the data vectors as:
-
-    $$
-    d(u,v) =  \sum_i {( u_i - v_i )^2 }
-    $$
-
-Changing the method results in an automatic calculation of the distances; the Compute button is provided for convenience. The result of this calculation is displayed as the 1st plot in a plot tab named for the selected distance method; this facilitates comparison between methods for your data. Also shown in this plot tab is a 3D plot of the result of a Principal Component Analysis (PCA) of the distance data; it shows the location of each data set in this space. Clusters may be evident from this plot; variable temperature scans tend to show a complex path of distance points with cluster grouping corresponding to phases. Since data sets may be in a series, a plot of the serial distances across the suite of data is shown; spikes in a temperature series may indicate phase changes. The GUI will be extended to show more steps in cluster analysis.
-
-* **linkage method for hierarchical clustering** - there are several choices for linkage in determining the hierarchical relationship (if any) between the data sets and the algorithm will use the distance matrix determined above to determine the data hierarchy. The distances are used by the linkage method to group similar data into clusters; these are successively combined until just a single cluster is obtained. A dendrogram is displayed showing the progression of this clustering. Each cluster is given a mean position, s or t, to compare to the others. The linkage methods for calculating the distance (using the distance method, dist, as selected above) between each pair of clusters are:
-
-    * **single** – computes the linkage as:
-
-    $$
-    d(s,t) = \min(dist(u(s)_i,v(t)_j))
-    $$
-
-    * **complete** – computes the linkage as:
-
-    $$
-    d(s,t) = \max(dist(u(s)_i,v(t)_j)
-    $$
-
-    * **average** (default) – computes the linkage as (Ns, Nt are numbers of members in cluster s & t, respectively):
-
-    $$
-    d(s,t) = \sum_{ij} {\frac{  dist(u(s)_i,v(t)_j)}{N_s N_t}}
-    $$
-
-    * **weighted** – computes the linkage when s is formed with clusters u & v and t is another cluster as:
-
-    $$
-    d(s,t) = (dist(u,t)+dist(v,t))/2
-    $$
-
-    * **centroid** ("UPGMC") – computes the linkage when cs & ct are the centroids of clusters s & t, respectively as:
-
-    $$
-    d(s,t) = (dist(c_s, c_t)
-    $$
-
-    * **median** ("WPGMC") – computes the linkage when ms & mt are the medians for all member pairs in clusters s & t as:
-
-    $$
-    d(s,t) = (dist(m_s, m_t)
-    $$
-
-    * **ward** – computes the linkage when s is formed with clusters u & v and t is another cluster as (Nu, Ns, Nt are numbers of members in cluster u, s & t, respectively, & T=Nu+Nv+Nt):
-
-    $$
-    d(s,t) = \sqrt{ \frac{N_t+N_u}{T}dist^2(t,u) + \frac{N_t+N_v}{T} dist^2(t,v) - \frac{N_t}{T} dist^2(u,v) } 
-    $$
-
-    Changing the linkage method results in an automatic recalculation of the hierarchical clustering; a Compute button is provided for convenience. The result of this calculation is shown as a dendrogram in the same plot tab; the 4th plot shows the percentage contribution of the leading terms in the PCA to the distance data. Usually, 2-3 terms are sufficient to describe the distribution.
-
-* **Select number of clusters** for K-means clustering (scipy algorithm). The algorithm attempts to group the data points (e. g. as in the PCA plot) into the requested number of clusters based on Euclidian distances on a "whitened" data array (i. e. not the distance matrix). To whiten the data matrix the suite of values at each position (e. g. at each 2Q) are divided by its standard deviation; this reduces the scale of the PWDR & PDF observations to just numbers of standard deviations from zero. Use the Compute to repeat the K-means clustering; the start points are randomly selected and will sometimes yield different results. Cluster populations are shown in the GUI, clusters are colored to match the data point colors in the PCA plot.
-
-    * **Select cluster to list members** – Shows a colored list of the data items that belong to the selected cluster.
-    * **Select cluster member** (use mouse RB on item in displayed list) – Displays the PWDR (or PDF) data on the Powder Pattern plot tab for the selected item.
-
-* **Plot selection** – changes the displayed plots:
-    * **All** – All four plots are shown
-    * **Distances** – Only the distance matrix is shown
-    * **Dendogram** – Only the hierarchical dendrogram is shown.
-    * **3D-PCA** – Only the 3D representation of the Principal Component Analysis is shown.
-    * **Diffs** – Only the serial differences are shown.
-
-## Cluster Analysis with scikit-learn
-
-The next section of the GUI only appears if the scikit-learn package is installed. It has multiple algorithms for doing clustering and detecting outliers (i. e. bad data) in the suite of PWDR or PDF patterns. Changing the method or number of clusters results in an automatic calculation; the **Compute** button is provided for convenience. There is a reminder to properly cite Scikit-learn if you use it.
-
-* **Select clustering method** – some may also require selecting number of clusters
-
-    * **K-Means** (requires number of clusters) – Uses the scikit-learn "K-means++" algorithm for clustering; this gives a better starting position and usually succeeds on the 1st try. It uses the "whitened" data matrix.
-    * **Affinity propagation** – It uses the distance matrix computed above.
-    * **Mean-shift** – It uses the "whitened" data matrix.
-    * **Spectral clustering** (requires number of clusters) – It uses the "whitened" data matrix.
-    * **Agglomerative clustering** (requires number of clusters) – It uses the distance matrix computed above.
-
-For details of these methods, please see [2.3. Clustering — scikit-learn 1.1.2 documentation](https://scikit-learn.org/stable/modules/clustering.html). After completion, Cluster populations are shown in the GUI and clusters are colored to match the data point colors in the PCA plot.
-
-## Outlier Analysis with scikit-learn
-
-After selection of the PWDR or PDF data and doing the distance calculation, one can examine the distance data for possible "bad" data items. These outliers can be detected by a choice of methods that make different assumptions how the data "should" be clustered; any data that do not fall within them are flagged as outliers and are colored different in the resulting 3D PCA plot from all others that would be in clusters. Although the chosen distance method affects the appearance of the 3D PCA plot, the three outlier methods all use the original data, thus are independent of any selected distance method. The GUI is refreshed showing a listing of the outlier data; selection of any, displays that data item in the powder pattern plot tab. Any previous cluster identification, e. g. by K-means, is erased. The outlier detection methods are:
-
-* **One-Class SVM** - Attempts to form boundaries around the clusters; outliers are items that fall outside the boundaries.
-* **Isolation Forest** - Similar to the above but uses a different algorithm.
-* **Local Outlier Factor** - Uses the local density of other points about each point to determine if it is within a high-density area, i. e. in a cluster, or not.
-
-Further details of these methods can be found at [2.7. Novelty and Outlier Detection — scikit-learn 1.1.2 documentation](https://scikit-learn.org/stable/modules/outlier_detection.html). The current GSAS-II implementation of these methods all use the default settings for any of their respective parameters.
-
-### What can I do with the plots?
-
-For each selection of distance method, i.e. "Euclidian", a plot tab is created with 2 or 4 plots. They are: 1\) the distance matrix displayed in the same way the refinement covariance matrix is displayed (default coloring is "paired" – same parameter as the powder pattern contour plot); 2\) the 3D PCA analysis plot; 3\) the hierarchical dendrogram plot and 4\) the PCA percent contribution plot. Each can be zoomed independent of the others and the 1st three can be selected to show as a single plot in the tab (see **Plot selection** above). A LB mouse selection (& hold button down) of a 3D PCA point will show the data set name in the plot status line. If clusters are determined by e. g. K-means, the 3D PCA points will be colored by cluster membership.

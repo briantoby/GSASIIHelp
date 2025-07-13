@@ -8,7 +8,7 @@ This window provides parameters for computing the pair distribution function [PD
 
 The **Optimize PDF** button can be used to refine the values of the "Flat Bkg", "Background ratio" and "Ruland width" parameters to best agree with the -4*pi*r line that is plotted for r < Rmin. Rmin should be set to a distance below the shortest expected interatomic distance for the material. 
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 The PDF parameters can be changed, triggering recomputation of the I(Q), S(Q), F(Q) and G(R) functions.
 
@@ -22,11 +22,11 @@ Available menu commands are:
 * **Compute PDF** - Recomputes the PDF for the current entry. This is usually done automatically when values are changed, but if not, this can be forced with this menu item.
 * **Compute all PDFs** - Recomputes the PDFs for all selected PDF entries. This is usually done after Copy Controls is used. By default, PDFs are optimized to reduce the low G(r) region, but this can be turned off.
 
-### What is plotted here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 When a chemical formula and appropriate control values are provided, clicking on this menu item causes the I(Q), S(Q), F(Q) and G(R) functions to be plotted, as described separately, below. 
 
-### What can I do with the plot?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 For each of the plots, the following keyboard shortcuts are available:
 

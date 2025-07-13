@@ -10,7 +10,7 @@ This window shows whatever comment lines (preceded by "#") found when the peaks 
 
 This window shows the limits in position to be used in indexing from these peak positions. The 'original' values are obtained from the minimum & maximum 1st & last position. The 'new' values determine the range of data that will be used in fitting. Units are 2Q.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 You can change the "new" values for Tmin and Tmax as needed. Change the upper and lower Tmin values by clicking on the appropriate vertical line and dragging it to the right or left or by typing values into the data window.
 
@@ -22,7 +22,7 @@ Menu '**Edit Limits**'
 
 This window shows the relevant instrument parameters for a peaks list; namely a wavelength and zero needed to relate d-spacing to 2θ. Neither are refinable.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Menu '**Operations**' – (many are irrelevant & will probably be removed at some point; only useful ones will be mentioned below).
 
@@ -37,7 +37,7 @@ This window shows the relevant instrument parameters for a peaks list; namely a 
 
 This window shows the list of peaks that will be used for indexing (see Unit Cells List). It was filled when the import of the peaks list was done. It shows 2Q position as input or calculated from provided d-spacing and wavelength given in Instrument Parameters. Note that peaks from a neutron TOF pattern could be entered here as d-spacings in descending order and a suitable wavelength used in the Instrument Parameters. When indexing is completed, this display will show the resulting hkl values for every indexed reflection along with the calculated d-spacing ('d-calc') for the selected unit cell in Unit Cells List.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. You may deselect individual peaks from indexing by unchecking the corresponding 'use' box.
 
@@ -45,7 +45,7 @@ This window shows the list of peaks that will be used for indexing (see Unit Cel
 
 This tree item has several purposes, it can be used to perform autoindexing and it can be used to show the positions of peaks from unit cells which may be results from autoindexing or may be entered from a phase or manually. It can be used to refine unit cell parameters. It can also be used to search for cells/symmetry settings related to a specified unit cell & space group.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 **For autoindexing**, the peaks in the Index Peak List are used. Select one or more Bravais lattice types to use and use the "Cell Index/Refine"/"Index Cell" menu command to start indexing. Output will appear on the console and a progress bar dialog will appear which tracks trial volume. A Cancel button will terminate indexing; it may need to be pressed more than once to fully terminate the indexing process. Console output shows possible solutions with a computed M20 for each; good solutions are indicated by high M20 values. X20 gives number of unindexed lines out of the 1st 20 lines and Nc gives total number of reflections generated for each solution.
 

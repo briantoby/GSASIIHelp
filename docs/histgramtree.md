@@ -30,13 +30,13 @@ Each powder diffraction dataset has a number of children in the tree as are show
 * Unit Cells List
 * Reflection Lists
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 Menu **Commands**
 
 * **Error Analysis** – this produces a 'normal probability' plot for the refinement result as bounded by the limits. The slope and intercept of the curve in the central region (-1 < / < 1) are shown on the plot status line. The slope is the GOF for the best fit set of data points (~68% of the data).
 
-### What is plotted here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 The powder patterns that are part of your project are shown on this page. They can be displayed as a stack of powder patterns, just a single pattern or as a contour image of the peak intensities. What can be done here will depend on how many patterns are shown as well as what mode is selected. Note that the tick marks and difference curve positions can be customized, as discussed below.
 
@@ -49,7 +49,7 @@ Similar plots to the one here are displayed when different subtree items are sel
 * Selecting Peak List allows positions of peaks to be defined for use in direct peak fitting.
 * Selecting Unit Cells List can show the positions of reflections for an arbitrary set of unit cell parameters, optionally with space group extinctions applied.
 
-### What can I do with the plot?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 * **Move mouse**: As the mouse cursor is moved across the plot, the plot status line will show the cursor position as 2Q (or TOF), d-spacing, Q and the intensity.
 * **Press keyboard keys** - See below. The "s" and "w" modes are commonly used.
@@ -155,7 +155,7 @@ This window shows whatever comment lines (preceded by “#”) found when the po
 
 This window shows the limits in position to be used in any fitting for this powder pattern. The 'original' values are obtained from the minimum & maximum values in the powder pattern. The 'new' values determine the range of data that will be used in fitting, Tmax and Tmin. Tmin and Tmax will be either 2θ (deg.) for CW data or time (μsec) for TOF data. You can also designate areas of the pattern that should be "excluded", meaning that they will not be included in the refinement. This should be be done when there is a well-understood reason why that region is expected to have spurious intensities (such as scattering from a furnace). For the computed pattern, shown as a green line from a fit, no computed pattern is shown for data in an excluded region.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 You can change the 'new' values for Tmin and Tmax as needed. Change the upper (Tmax) and lower (Tmin) values by clicking on the appropriate vertical line and dragging it to the right or left, or by typing values into the data window, or using the "Set lower limit" or "Set upper limit" commands in the "Edit Limits" menu and then click on a point in the pattern.
 
@@ -176,11 +176,11 @@ Menu '**Edit Limits**':
 **Cancel Set**
 : Resets the "Add excluded region", "Set lower limit" or "Set upper limit" command.
 
-### What is plotted here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 The plot is the same as for Powder Histograms - type PWDR and the key press commands are all the same. However, vertical lines: green for the lower Tmin value and red for the upper Tmin value, are displayed. Excluded regions are displayed with pairs of magenta vertical lines. All these vertical lines can be dragged to set limits/excluded regions.
 
-### What can I do with the plot?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 The upper and lower Tmin values can be changed by clicking on the appropriate vertical line and dragging it to the right or left. A drag beyond the end of the pattern will reset that limit to the original value. Likewise, excluded regions can be created here and modified by dragging the lines as needed.
 
@@ -202,7 +202,7 @@ This window shows the choice of background functions and coefficients to be used
 
 * Subtract an experimentally measured background scaled by a multiplier.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Menu '**Background**' –
 
@@ -219,7 +219,7 @@ This window shows the choice of background functions and coefficients to be used
 
 Any modification of the background representation will be immediately applied to the calculated pattern so you can see its effect.
 
-### What is plotted here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 The plot is the same as for Powder Histograms - type PWDR and the key press commands are largely the same. Specific to this plot are fixed background points. These can be added, deleted and moved. Once that is done the background parameters for the selected function can be fitted to the fixed points. NB: the number of fixed points must exceed the number of background parameters to be fitted. Not recommended for fitting sharp Bragg peak backgrounds unless sufficient fixed points are selected across each Bragg peak.
 
@@ -227,7 +227,7 @@ The plot is the same as for Powder Histograms - type PWDR and the key press comm
 
 This window shows the instrument parameters for the selected powder data set. Note that the preferred method for use of GSAS-II is that these parameters are fitted to calibration materials to develop a set of values for an instrumental configuration and these values are not refined when fitting samples. The plot window shows the corresponding resolution curves. Solid lines are for the default values (in parentheses), dashed lines from the refined values and '+' fitted widths for individual entries in the Peak List. Curves that fall below zero will generate a warning in the plot title, coefficients should be adjusted to ensure every dashed line curve is zero or above.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Menu '**Operations**' – A single menu is provided with the selection of instrument parameters.
 
@@ -261,7 +261,7 @@ This window shows the instrument parameters for the selected powder data set. No
 2. You can change any of the instrument coefficients
 3. You can choose to refine any instrument coefficients. NB: In certain circumstances some choices are ignored e.g. Zero is not refined during peak fitting. Also, some choices may lead to unstable refinement, e.g. Lam refinement and lattice parameter refinement. Examine the 'Covariance' display for highly correlated parameters.
 
-### What is plotted here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 This plot shows the contributions to the powder pattern peak widths as ΔQ/Q (=Δd/d) vs. Q for the Gaussian and Lorentzian parts of the profile function, in addition to the overall widths. The solid curves are based on the default values of U, V, W, X and Y shown in the Instrument Parameters window (shown in parentheses; these are the values for the instrument contribution that were set when the powder pattern was first read in to GSAS-II.) The dashed values are based on the refined values, if different. If individual peak fitting has been performed, the values of 'sig' & 'gam' for those peaks are plotted as '+'; these are computed from the fitted values of U, V, W, X and Y as well as any sig or gam values that are individually refined. For neutron TOF, the curves include those for the α and β coefficients. All curves must be zero or above. Negative values are not mathematically or physically possible; if encountered in fitting, the corresponding peaks may be ignored.
 
@@ -269,7 +269,7 @@ This plot shows the contributions to the powder pattern peak widths as ΔQ/Q (=�
 
 This window shows the various sample-dependent parameters for the selected powder pattern. The presence of a refine button indicates that a parameter can be refined (all others are fixed.) All values shown in this window can be edited. Note that the last three parameters (named FreePrmX, X=1,2,3) have labels that can be changed. If changed in one histogram, the same label is used for all histograms. When a label is changed, the Comments tree item for each PWDR histogram is searched for a matching "Label=value" pair (differences in letter case between the two label strings is ignored). When found, the value is converted to a float and saved as the appropriate Sample Parameter. NB: for powder data, be sure the correct instrument type is selected (Debye-Scherrer or Bragg-Brentano). Also, ensure the goniometer radius is correct (in mm) so that sample displacements are properly scaled (in μm).
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 **Command** Menu items
 
@@ -302,7 +302,7 @@ If individual sigma<sup>2</sup> or gamma values are refined, then those value(s)
 
 For peak fitting, the background is generated using the parameters in the Background data tree entry. Also, the range of data used in the fit is set from the Limits tree item. In both cases these are the same values that are used in Rietveld fits. Note that optionally the parameters on the Background and in the Instrument Parameters tree items may be refined during peak fitting.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 There are three ways to interact with Peak List data tree item: through its menu, labeled Peak Fitting, through interaction with the peak list table, and through interactions with the plot.
 
@@ -330,11 +330,11 @@ The **Peak Fitting** menu contains the following commands:
 * **Move selected peak** - A peak may be moved using the following process: select it in the table by clicking on its label (to left), use this menu item. The peak line will then follow movement of the mouse in the plot window. Click with the left mouse button to set a new position. Click with the right mouse button to delete that peak. Click outside the axes to abort the move and return to the previous position. (Note that peak movement is also possible with the plot window, see below.)
 * **Gen unvaried widths** - This determines how sigma and gamma values are treated when unvaried. When this item is checked (the default mode), unvaried Gaussian (sigma) and Lorentzian (gamma) peak widths will be generated from the the appropriate profile terms in the Instrument Parameters tree item (U, V & W for sigma; X & Y for gamma). This allows those Instrument Parameters to be refined. If this mode is changed and the "Gen unvaried widths" mode is unchecked the the sigma and gamma peak widths are used as supplied, but then it is not possible to refine Instrument Parameters. This mode will not affect sigma and gamma values that have their refine flag checked.
 
-### What is plotted here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 The plot is the same as for Powder Histograms - type PWDR and the key press commands are largely the same. The plot window shows the observed and computed patterns, as well as the background and peak positions. Observed points are shown as blue crosses (+) and the fitted pattern is shown as a solid green line. The background is shown as a red line and the difference curve is shown as a cyan (turquoise) line, below the observed and computed pattern. Specific to this plot are the peak positions that are shown as vertical dashed blue lines. To show that a peak is selected, it is highlighted in yellow and the blue line is made wider. The upper and lower data limits are shown as red and green dashed vertical lines, respectively.
 
-### What can I do with the plot?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 For all actions involving mouse clicks such as those below, be sure that the Zoom/Pan buttons are not selected on the Plot window, as the mouse will be used for zooming or panning, not the desired action.
 
@@ -348,7 +348,7 @@ For all actions involving mouse clicks such as those below, be sure that the Zoo
 
 This window shows the list of peaks that will be used for indexing (see Unit Cells List). It must be filled with peaks from the Peak List (using the Operations‑>Load/Reload menu command) before indexing can proceed. When indexing is completed, this display will show the resulting hkl values for every indexed reflection along with the calculated d-spacing ('d-calc') for the selected unit cell in Unit Cells List. .
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 * Menu command **Operations‑>Load/Reload** – loads the peak positions & intensities from the Peak List to make them available for the indexing routine. The d-obs value is obtained from Bragg's Law after applying the Zero correction shown on the Instrument Parameters table to the position shown here.
 * Menu command **Operations‑>Save** – saves a csv version of this table.
@@ -358,11 +358,11 @@ This window shows the list of peaks that will be used for indexing (see Unit Cel
 * Pressing "d" in the plot window causes the next peak in the table (or the first if none are selected) to be selected and causes that peak to be highlighted in the plot; pressing "u" causes the previous peak in the list to be highlighted.
 * You may designate that individual peaks not be used in the indexing by process by unchecking the corresponding "use" box. 
 
-### What is plotted here?
+<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 The plot is the same as for Powder Histograms - type PWDR and the key press commands are largely the same. The plot window shows the observed and computed patterns, as well as the background and peak positions. Observed points are shown as blue crosses (+) and the fitted pattern is shown as a solid green line. The background is shown as a red line and the difference curve is shown as a cyan (turquoise) line, below the observed and computed pattern. Specific to this plot are the peak positions that are shown as vertical solid blue lines. To show that a peak is selected, it is highlighted in yellow and, if "use" is selected, the blue line is made wider. The upper and lower data limits are shown as red and green dashed vertical lines, respectively.
 
-### What can I do with the plot?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 * Highlight each peak in the list successively using the "d" or "u" keyboard keys. 
 
@@ -370,7 +370,7 @@ The plot is the same as for Powder Histograms - type PWDR and the key press comm
 
 This tree item has several purposes, it can be used to perform autoindexing and it can be used to show the positions of peaks from unit cells which may be results from autoindexing or may be entered from a phase or manually. It can be used to refine unit cell parameters. It can also be used to search for cells/symmetry settings related to a specified unit cell & space group.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 The actions that can be performed with this tree item are:
 
@@ -421,7 +421,7 @@ GSAS-II offers space groups in the following Laue classes (note that some redund
 * Monoclinic: I2/m, A2/m, C2/m, P2/m (b-unique)
 * Triclinic: P1, C1
 
-### What can I do with the plot?
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 The fit limits can be changed from the plot either here or in the Limits data tree. Change the upper and lower Tmin values by clicking on the appropriate vertical line and dragging it to the right or left. Reducing the maximum Q value (TOF min or 2θ max) can greatly speed the time needed to compute reflections from a unit cell.
 
@@ -431,7 +431,7 @@ This window shows the reflections for the selected phase (selected by the tab at
 
 The powder diffraction reflection list shows the reflection widths, accounting for instrumental as well as sample effects (the latter can be anisotropic), where the columns labeled as "sig2" and "gam" show the Gaussian and Lorentzian components for the width. The "sig2" value is the variance of the Gaussian contribution to the peak (sigma\*\*2), while "gam" is the full-width at half maximum (FWHM) for the Lorentzian component. Note that the Gaussian FWHM is given by FWHM = Sqrt(8 \* ln2 \* sigma\*\*2). For CW data, both "sig" and "gam" have units of degrees*100 (centidegrees) For TOF data, both are in microseconds.
 
-#### What can I do here?
+#<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. The indices (hkl values) for reflections can be displayed by letting the mouse rest at the position of a reflection in 2Q, Q, etc. in the PWDR plot (the vertical position does not matter) for reflections in the phase selected as a tab in the data window. A "tool tip" with the reflection indices will be displayed for any reflections close to the lateral mouse position.
 

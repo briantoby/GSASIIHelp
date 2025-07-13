@@ -8,7 +8,7 @@ This window shows whatever comment lines found above the QIE table when the smal
 
 This window shows the limits in position to be used in any fitting for this small angle scattering data. The 'original' values are obtained from the minimum & maximum values in the data. The 'new' values determine the range of data that will be used in fitting. Units are in Q (Å-1).
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 You can change the "new" values for Tmin and Tmax as needed. Change the upper and lower Tmin values by clicking on the appropriate vertical line and dragging it to the right or left or by typing values into the data window.
 
@@ -20,7 +20,7 @@ Menu '**Edit Limits**'
 
 This window shows the relevant instrument parameter for small angle data; namely a wavelength to relate Q to scattering angle (2Q). It is not refinable.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Menu '**Operations**' –
 
@@ -32,7 +32,7 @@ This window shows the relevant instrument parameter for small angle data; namely
 
 This window shows the substances that make up the small angle scattering sample. By default, “vacuum” and “unit scatterer” are included; others can be added as needed. The desired substances must be added to Sample Parameters (below) before their use in constructing scattering models for small angle data analysis.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 1. Menu '**Edit substance**' –
 
@@ -50,7 +50,7 @@ This window shows the substances that make up the small angle scattering sample.
 
 This window shows the various sample-dependent parameters for the selected small angle pattern. All values shown in this window can be edited. Note that the last three parameters (named FreePrmX, X=1,2,3) have labels that can be changed. If changed in one histogram, the same label is used for all histograms. When a label is changed, the Comments tree item for each SASD histogram is searched for a matching "Label=value" pair (differences in letter case between the two label strings is ignored). When found, the value is converted to a float and saved as the appropriate Sample Parameter. The last two items define the two components of a small angle scattering sample. One comprises the objects of interest while the other is the marix they are embedded in. The small angle pattern then results from the shape and scattering contrast between the two materials.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 **Command** Menu  - In this window you can change parameters associated with a histogram. This histogram scale factor is ignored for SASD. Remaining parameters are of use for parametric studies and may be changed with the menu commands described here.
 
@@ -82,7 +82,7 @@ Small angle scattering models in GSAS-II have four different forms:
 * **Pair Distance** – this is used as the preliminary step in creating a “beads” model for the shape of a protein and gives the distribution of all interatomic vectors within the protein.
 * **Shapes** – after a Pairs Distance distribution has been obtained, this develops a bead model for the protein shape that best satisfies the pair distance distribution using the SHAPES python algorithm developed by J. Badger.
 
-### What can I do here?
+<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
 Menu **Models** –
 

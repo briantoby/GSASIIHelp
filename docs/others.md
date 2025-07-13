@@ -60,3 +60,36 @@ follow the general usage in the Topas program. They are converted to the values 
 * **mono_slit_attenuation (none)** - The attenuation of the Cu K alpha 2 source lines relative to the K alpha 1 lines as determined by the focal slit
 
 If you use this, please cite M.H. Mendenhall, K. Mullen & J.P. Cline (2015), J. Res. of NIST, 120, p223. [DOI: 10.6028/jres.120.014](https://doi.org/10.6028/jres.120.014). If the incident beam monochromator model is used, please also cite: M.H. Mendenhall, D. Black & J.P. Cline (2019), J. Appl. Cryst., 52, p1087. [DOI: 10.1107/S1600576719010951](https://doi.org/10.1107/S1600576719010951).
+
+
+<a name="CorrectionCode"></a>
+## Applying corrections when reading powder data:
+
+A special parameter can be added manually to a `.instparm`  instrument parameter that will apply systematic changes to the position (usually 2\(\theta\)), intensity or weight values. An example showing how this is done follows:
+
+
+```
+#GSAS-II instrument parameter file; manually edited by B.H.Toby to show how to use CorrectionCode
+Lam:0.72768
+SH/L:0.002
+...
+Polariz.:0.99
+Type:PXC
+Bank:1
+
+CorrectionCode:'''# Example 2theta correction (applied via numpy array correction; fast!)
+print('2theta before', rd.powderdata[0][:3],'...',rd.powderdata[0][-2:])
+TT = rd.powderdata[0]
+rd.powderdata[0] += 0.06038972 - 0.001500277 * TT + 7.389e-06 * TT**2
+print('2theta after', rd.powderdata[0][:3],'...',rd.powderdata[0][-2:])
+'''
+#
+# alternate example. This applies a correction point-by-point in a loop
+#
+#CorrectionCode:'''#apply 2theta correction in a loop
+#print '2T before', rd.powderdata[0][:3],'...',rd.powderdata[0][-3:]
+#for i,TT in enumerate(rd.powderdata[0]):
+#    rd.powderdata[0][i] += 0.06038972 - 0.001500277 * TT + 7.389e-06 * TT**2
+#print('2T after', rd.powderdata[0][:3],'...',rd.powderdata[0][-3:])
+#'''
+```
